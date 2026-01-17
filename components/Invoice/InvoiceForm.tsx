@@ -122,7 +122,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({
         await axios.patch(`/api/invoices/${initialData.id}`, data);
       } else {
         await axios.post(`/api/invoices`, data);
-        // window.print();
+        window.print();
       }
       toast.success(toastNotification);
       router.push("/invoices");
